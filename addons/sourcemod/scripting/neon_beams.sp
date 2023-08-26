@@ -512,32 +512,31 @@ public void OnPluginStart()
 
 
 	// Commands
-	RegAdminCmd("sm_neon_paint2",		CmdNeonPaint2,		ADMFLAG_CUSTOM1,	"Menu to start and stop painting - continuous spawning of Particles with color selection.");
-	RegAdminCmd("sm_neon_preset2",		CmdNeonPreset2,		ADMFLAG_ROOT,		"Create or edit a preset with Particles. Usage: sm_neon_preset2 <config file/preset name>.");
-	RegAdminCmd("sm_neon_save2",		CmdNeonMenuSave2,	ADMFLAG_ROOT,		"Menu to spawn and save Particles at your crosshair.");
-	RegAdminCmd("sm_neon_temp2",		CmdNeonMenuMap2,	ADMFLAG_ROOT,		"Menu to spawn temporary Particles at your crosshair.");
-	RegAdminCmd("sm_neon_point",		CmdNeonMenuPoint,	ADMFLAG_ROOT,		"Menu to spawn temporary Beams from your eye location. Usage: sm_neon_point [optional range from eyes]");
-	RegAdminCmd("sm_neon_point2",		CmdNeonMenuPoint2,	ADMFLAG_ROOT,		"Menu to spawn temporary Particles from your eye location. Usage: sm_neon_point2 [optional range from eyes]");
-	RegAdminCmd("sm_neon_points",		CmdNeonMenuPoints,	ADMFLAG_ROOT,		"Menu to spawn save Beams from your eye location. Usage: sm_neon_points [optional range from eyes]");
-	RegAdminCmd("sm_neon_points2",		CmdNeonMenuPoints2,	ADMFLAG_ROOT,		"Menu to spawn save Particles from your eye location. Usage: sm_neon_points2 [optional range from eyes]");
-	RegAdminCmd("sm_neon_preset_eye",	CmdNeonPreset3,		ADMFLAG_ROOT,		"Opens the Preset menu list, spawns them from your eye location. Usage: sm_neon_preset_eye [optional range from eyes]");
-	RegAdminCmd("sm_neon_preset_eyes",	CmdNeonPresetS,		ADMFLAG_ROOT,		"Opens the Preset menu list, spawns them from your eye location and saves to map. Usage: sm_neon_preset_eyes [optional range from eyes]");
+	RegAdminCmd("sm_neon_paint2",		CmdNeonPaint2,		ADMFLAG_CUSTOM6,	"Menu to start and stop painting - continuous spawning of Particles with color selection.");
+	RegAdminCmd("sm_neon_preset2",		CmdNeonPreset2,		ADMFLAG_CUSTOM6,		"Create or edit a preset with Particles. Usage: sm_neon_preset2 <config file/preset name>.");
+	RegAdminCmd("sm_neon_save2",		CmdNeonMenuSave2,	ADMFLAG_CUSTOM6,		"Menu to spawn and save Particles at your crosshair.");
+	RegAdminCmd("sm_neon_temp2",		CmdNeonMenuMap2,	ADMFLAG_CUSTOM6,		"Menu to spawn temporary Particles at your crosshair.");
+	RegAdminCmd("sm_neon_point",		CmdNeonMenuPoint,	ADMFLAG_CUSTOM6,		"Menu to spawn temporary Beams from your eye location. Usage: sm_neon_point [optional range from eyes]");
+	RegAdminCmd("sm_neon_point2",		CmdNeonMenuPoint2,	ADMFLAG_CUSTOM6,		"Menu to spawn temporary Particles from your eye location. Usage: sm_neon_point2 [optional range from eyes]");
+	RegAdminCmd("sm_neon_points",		CmdNeonMenuPoints,	ADMFLAG_CUSTOM6,		"Menu to spawn save Beams from your eye location. Usage: sm_neon_points [optional range from eyes]");
+	RegAdminCmd("sm_neon_points2",		CmdNeonMenuPoints2,	ADMFLAG_CUSTOM6,		"Menu to spawn save Particles from your eye location. Usage: sm_neon_points2 [optional range from eyes]");
+	RegAdminCmd("sm_neon_preset_eye",	CmdNeonPreset3,		ADMFLAG_CUSTOM6,		"Opens the Preset menu list, spawns them from your eye location. Usage: sm_neon_preset_eye [optional range from eyes]");
+	RegAdminCmd("sm_neon_preset_eyes",	CmdNeonPresetS,		ADMFLAG_CUSTOM6,		"Opens the Preset menu list, spawns them from your eye location and saves to map. Usage: sm_neon_preset_eyes [optional range from eyes]");
 
-	RegAdminCmd("sm_neon",				CmdNeonMenuMain,	ADMFLAG_ROOT,		"Open the main menu for Neon Beams.");
-	RegAdminCmd("sm_neon_temp",			CmdNeonMenuMap,		ADMFLAG_ROOT,		"Menu to spawn temporary Beams at your crosshair.");
-	RegAdminCmd("sm_neon_save",			CmdNeonMenuSave,	ADMFLAG_ROOT,		"Menu to spawn and save Beams at your crosshair.");
-	RegAdminCmd("sm_neon_paint",		CmdNeonPaint,		ADMFLAG_CUSTOM1,	"Menu to start and stop painting - continuous spawning of Beams with color selection.");
-	RegAdminCmd("sm_neon_preset",		CmdNeonPreset,		ADMFLAG_ROOT,		"Create or edit a preset with Beams: sm_neon_preset <config file/preset name>.");
-	RegAdminCmd("sm_neon_preset_temp",	CmdNeonTempPre,		ADMFLAG_ROOT,		"Opens the Preset menu list, to spawn temporary presets.");
-	RegAdminCmd("sm_neon_preset_save",	CmdNeonSavePre,		ADMFLAG_ROOT,		"Opens the Preset menu list, allowing you to save them to the map.");
+	RegAdminCmd("sm_neon",				CmdNeonMenuMain,	ADMFLAG_CUSTOM6,		"Open the main menu for Neon Beams.");
+	RegAdminCmd("sm_neon_temp",			CmdNeonMenuMap,		ADMFLAG_CUSTOM6,		"Menu to spawn temporary Beams at your crosshair.");
+	RegAdminCmd("sm_neon_save",			CmdNeonMenuSave,	ADMFLAG_CUSTOM6,		"Menu to spawn and save Beams at your crosshair.");
+	RegAdminCmd("sm_neon_paint",		CmdNeonPaint,		ADMFLAG_CUSTOM6,	"Menu to start and stop painting - continuous spawning of Beams with color selection.");
+	RegAdminCmd("sm_neon_preset",		CmdNeonPreset,		ADMFLAG_CUSTOM6,		"Create or edit a preset with Beams: sm_neon_preset <config file/preset name>.");
+	RegAdminCmd("sm_neon_preset_temp",	CmdNeonTempPre,		ADMFLAG_CUSTOM6,		"Opens the Preset menu list, to spawn temporary presets.");
+	RegAdminCmd("sm_neon_preset_save",	CmdNeonSavePre,		ADMFLAG_CUSTOM6,		"Opens the Preset menu list, allowing you to save them to the map.");
 
-	RegAdminCmd("sm_neon_del",			CmdNeonMapDel,		ADMFLAG_ROOT, 		"Remove the last placed preset or beam from the saved map config.");
-	RegAdminCmd("sm_neon_delpre",		CmdNeonPreDel,		ADMFLAG_ROOT,		"Remove the last saved beam from the currently selected preset. Or delete a preset config, usage: sm_neon_delpre <preset name>");
-	RegAdminCmd("sm_neon_wipe",			CmdNeonWipe,		ADMFLAG_ROOT, 		"Delete all beams and presets saved to the current maps config.");
-	RegAdminCmd("sm_neon_load",			CmdNeonLoad,		ADMFLAG_ROOT,		"Reloads the Preset and current Map configs, used to refresh the plugin after manual cfg changes.");
-	RegAdminCmd("sm_neon_overload",		CmdNeonOverLoad,	ADMFLAG_ROOT,		"Overrides the duplicate load prevention, and loads the auto spawn data config for the current map.");
-	RegAdminCmd("sm_neon_stats",		CmdNeonStats,		ADMFLAG_ROOT, 		"Shows details about how many beams were spawned and how long it took etc.");
-	// RegAdminCmd("sm_neon_con",			CmdNeonCon,			ADMFLAG_ROOT, 		"For testing late loading on clients.");
+	RegAdminCmd("sm_neon_del",			CmdNeonMapDel,		ADMFLAG_CUSTOM6, 		"Remove the last placed preset or beam from the saved map config.");
+	RegAdminCmd("sm_neon_delpre",		CmdNeonPreDel,		ADMFLAG_CUSTOM6,		"Remove the last saved beam from the currently selected preset. Or delete a preset config, usage: sm_neon_delpre <preset name>");
+	RegAdminCmd("sm_neon_wipe",			CmdNeonWipe,		ADMFLAG_CUSTOM6, 		"Delete all beams and presets saved to the current maps config.");
+	RegAdminCmd("sm_neon_load",			CmdNeonLoad,		ADMFLAG_CUSTOM6,		"Reloads the Preset and current Map configs, used to refresh the plugin after manual cfg changes.");
+	RegAdminCmd("sm_neon_overload",		CmdNeonOverLoad,	ADMFLAG_CUSTOM6,		"Overrides the duplicate load prevention, and loads the auto spawn data config for the current map.");
+	RegAdminCmd("sm_neon_stats",		CmdNeonStats,		ADMFLAG_CUSTOM6, 		"Shows details about how many beams were spawned and how long it took etc.");
 
 
 
